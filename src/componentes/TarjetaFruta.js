@@ -41,13 +41,15 @@ class TarjetaFruta extends React.Component {
 
     render() {
         return (
-            <div>
-                <hr />
+            <div style={{
+                border: '1px solid black'
+            }}>
                 <h3>{ this.props.name }</h3>                
                 <div>Cantidad: {this.state.cantidad}</div>
                 <button onClick={this.agregar}>+</button>
                 <button onClick={this.quitar}>-</button>
                 <button onClick={this.limpiar}>Limpiar</button>
+                <hr />
                 <p>$ { this.props.price }</p>
             </div>
         )
