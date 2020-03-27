@@ -1,4 +1,5 @@
 import React from 'react'
+import './TarjetaFruta.css'
 
 class TarjetaFruta extends React.Component {
     constructor(){
@@ -13,8 +14,6 @@ class TarjetaFruta extends React.Component {
         METHODS.forEach((method) => {
             this[method] = this[method].bind(this)
         })
-
-        
     }
 
     state = {
@@ -41,19 +40,13 @@ class TarjetaFruta extends React.Component {
 
     render() {
         const hasItems = this.state.cantidad > 0
-        const styles = {
-            border: '1px solid black',
-            marginBottom : '1em', /*Comentario y estilo recomendado*/
-            'margin-top' : '1em', //Comentario y estilo no recomendado
-            borderRadius :'0.5em',
-            padding: '1em',
-            background: hasItems ? 'linear-gradient(45deg, black, #4a02f7)' : '#FFF', /*Propiedad dinamica*/
-            color : hasItems ? '#FFF' : '#000',
-            transition : 'all 400ms ease-out'
-        }
+        
+        // const clases = hasItems ? 'TarjetaFruta-activa' : 'TarjetaFruta'
+        const clases = `TarjetaFruta ${hasItems ? 'TarjetaFruta-activa' : ''} `
+
 
         return (
-            <div style={styles}>
+            <div className={clases}>
                 <h3>{ this.props.name }</h3>                
                 <div>Cantidad: {this.state.cantidad}</div>
                 <button onClick={this.agregar}>+</button>
