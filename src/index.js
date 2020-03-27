@@ -23,9 +23,11 @@ class TarjetaFruta extends React.Component {
             this[method] = this[method].bind(this)
         })
 
-        this.state = {
-            cantidad : 0
-        }
+        
+    }
+
+    state = {
+        cantidad : 0
     }
 
     agregar () {
