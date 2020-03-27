@@ -40,10 +40,14 @@ class TarjetaFruta extends React.Component {
     }
 
     render() {
+        const styles = {
+            border: '1px solid black',
+            marginBottom : '1em', /*Comentario y estilo recomendado*/
+            'margin-top' : '1em' //Comentario y estilo no recomendado
+        }
+
         return (
-            <div style={{
-                border: '1px solid black'
-            }}>
+            <div style={styles}>
                 <h3>{ this.props.name }</h3>                
                 <div>Cantidad: {this.state.cantidad}</div>
                 <button onClick={this.agregar}>+</button>
