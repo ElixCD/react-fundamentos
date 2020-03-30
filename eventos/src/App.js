@@ -1,46 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
+import Contador from './Contador'
+import Gato from './Gato'
 
-class Contador extends Component {
-
+class App extends Component {
   state = {
-    video: {
-      title: 'Super Video',
-      likes: 0
-    }
-  }
-
-  add = () => {
-    this.setState((state) => ({
-      video:{
-        ...state.video, /*Utiliza spread para mantener todos los datos del objeto*/
-        likes: this.state.video.likes + 1
-      }
-    }))
+    fuerza: 100,
+    vidasRestantes:7,
   }
 
   render() {
+    const otrosDatos = {
+      raza : 'tropical',
+      peleasNocturnas: 300,
+    }
+
     return (
       <div>
-        <div>
-          <h1>
-            {this.state.video.title}
-          </h1>
-          <button onClick={this.add}>
-            Likes: ({this.state.video.likes})
-          </button>
-        </div>
+        <Contador />
+        <Gato 
+          name='Garfield' 
+          edad='2 años'
+          otrosDatos = {otrosDatos}
+          {...otrosDatos}
+          {...this.state}
+        />
       </div>
-    )
+    );
   }
-}
-
-function App() {
-  return (
-    <div>
-      <Contador />
-    </div>
-  );
 }
 
 export default App;
