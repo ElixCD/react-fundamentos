@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Contador from './Contador'
 import Gato from './Gato'
+import EventosMouse from './EventosMouse'
 
 class App extends Component {
   state = {
@@ -25,6 +26,7 @@ class App extends Component {
           {...otrosDatos}
           {...this.state}
         />
+        <EventosMouse />
       </div>
     );
   }
