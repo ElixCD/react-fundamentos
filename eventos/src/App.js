@@ -3,6 +3,7 @@ import './App.css';
 import Contador from './Contador'
 import Gato from './Gato'
 import EventosMouse from './EventosMouse'
+import EventosInput from './EventosInput'
 
 class App extends Component {
   state = {
@@ -18,7 +19,8 @@ class App extends Component {
 
     return (
       <div>
-        <Contador />
+        <EventosInput />
+        <EventosMouse />
         <Gato 
           name='Garfield' 
           edad='2 años'
@@ -26,7 +28,7 @@ class App extends Component {
           {...otrosDatos}
           {...this.state}
         />
-        <EventosMouse />
+        <Contador />        
       </div>
     );
   }
