@@ -10,8 +10,8 @@ class Hijo extends Component{
         return(
             <div className='box blue'>
                 <h2>Hijo</h2>
-                <button onClick= {this.props.onSaluda} > Saluda</button>
-                <button onClick= {this.manejadorClick} > Saluda Props</button>
+                <button onClick= {this.props.onSaluda} > Saluda</button> {/* Ejecutando evento */}
+                <button onClick= {this.manejadorClick} > Saluda Props</button> {/* Ejecutando evento y enviando informacion a función del padre */}
             </div>
         )
     }
