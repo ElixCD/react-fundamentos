@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PropChildren from './PropChildren'
 
@@ -10,10 +9,13 @@ class App extends React.Component {
   }
 
   render(){
+    /* Aplicamos destructuración */
+    const {uiColor} = this.state
+
     return (
       <div className="App">
         <PropChildren
-          uiColor={this.state.uiColor}
+          uiColor={uiColor}
         >
           Super <em>Ninja</em>
         </PropChildren>
