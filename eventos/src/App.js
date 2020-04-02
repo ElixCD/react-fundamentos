@@ -4,6 +4,8 @@ import Contador from './Contador'
 import Gato from './Gato'
 import EventosMouse from './EventosMouse'
 import EventosInput from './EventosInput'
+import EventoNativoVsDOM from './EventoNativoVsDOM'
+import PersistenciaEventos from './PersistenciaEventos'
 
 class App extends Component {
   state = {
@@ -19,6 +21,8 @@ class App extends Component {
 
     return (
       <div>
+        <PersistenciaEventos />
+        <EventoNativoVsDOM />
         <EventosInput />
         <EventosMouse />
         <Gato 
