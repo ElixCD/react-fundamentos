@@ -6,6 +6,7 @@ import EventosMouse from './EventosMouse'
 import EventosInput from './EventosInput'
 import EventoNativoVsDOM from './EventoNativoVsDOM'
 import PersistenciaEventos from './PersistenciaEventos'
+import Padre from './Components/EventosPersonalizados/Padre'
 
 class App extends Component {
   state = {
@@ -21,6 +22,8 @@ class App extends Component {
 
     return (
       <div>
+        <Padre />
+        <hr />
         <PersistenciaEventos />
         <EventoNativoVsDOM />
         <EventosInput />
