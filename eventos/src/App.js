@@ -8,6 +8,7 @@ import EventoNativoVsDOM from './EventoNativoVsDOM'
 import PersistenciaEventos from './PersistenciaEventos'
 import Padre from './Components/EventosPersonalizados/Padre'
 import Saludo from './Saludo'
+import InyectandoHTML from './InyectandoHTML'
 
 class App extends Component {
   state = {
@@ -23,6 +24,8 @@ class App extends Component {
 
     return (
       <div>
+        <InyectandoHTML />
+        <hr />
         <Saludo />
         <Saludo saluda />
         <Saludo name='User A' />
