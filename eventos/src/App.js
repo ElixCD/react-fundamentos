@@ -7,6 +7,7 @@ import EventosInput from './EventosInput'
 import EventoNativoVsDOM from './EventoNativoVsDOM'
 import PersistenciaEventos from './PersistenciaEventos'
 import Padre from './Components/EventosPersonalizados/Padre'
+import Saludo from './Saludo'
 
 class App extends Component {
   state = {
@@ -22,6 +23,11 @@ class App extends Component {
 
     return (
       <div>
+        <Saludo />
+        <Saludo saluda />
+        <Saludo name='User A' />
+        <Saludo saluda name='User B' />
+        <hr />
         <Padre /> {/*  Eventos personalizados */}
         <hr />
         <PersistenciaEventos />
