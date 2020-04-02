@@ -6,7 +6,7 @@ class PersistenciaEventos extends Component{
     }
 
     handlerChange = (event) => {
-        const color = event.target.value
+        const color = event.target.value //ayuda a mantener el valor en memoria
         console.log(color)
 
         this.setState(state => ({
