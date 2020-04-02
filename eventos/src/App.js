@@ -22,12 +22,16 @@ class App extends Component {
 
     return (
       <div>
-        <Padre />
+        <Padre /> {/*  Eventos personalizados */}
         <hr />
         <PersistenciaEventos />
+        <hr />
         <EventoNativoVsDOM />
+        <hr />
         <EventosInput />
+        <hr />
         <EventosMouse />
+        <hr />
         <Gato 
           name='Garfield' 
           edad='2 años'
@@ -35,7 +39,9 @@ class App extends Component {
           {...otrosDatos}
           {...this.state}
         />
-        <Contador />        
+        <hr />
+        <Contador /> 
+        <hr />       
       </div>
     );
   }

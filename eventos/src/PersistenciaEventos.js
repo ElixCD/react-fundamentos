@@ -17,6 +17,7 @@ class PersistenciaEventos extends Component{
     render (){
         return (
             <div>
+                Escribe un color en inglés:<br/>
                 <input
                     type='text'
                     onChange={this.handlerChange}
